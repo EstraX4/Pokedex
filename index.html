@@ -14,15 +14,23 @@
   </head>
   <body>
     <form action="" onsubmit="searchPokemon(event)">
-      <input type="text" name="pokemon" autocomplete="off" placeholder="Pokemon"/>
+      <input
+        type="text"
+        name="pokemon"
+        autocomplete="off"
+        placeholder="Pokemon"
+      />
     </form>
     <div data-poke-card class="poke-card">
-      <div data-poke-name  class="pokeName"></div>
+      <section class="pokeNameContend">
+        <div data-poke-name class="pokeName"></div>
+        <div data-poke-id class="pokeName"></div>
+      </section>
       <div data-poke-img-container class="img-container">
+        <img src="./Pokeball.png" alt="pokeball" class="pokeballImg" />
         <img data-poke-img class="poke-img" src="./poke-shadow.png" />
       </div>
       <section class="data-section">
-        <div data-poke-id></div>
         <div data-poke-types class="poke-types"></div>
         <div data-poke-stats class="poke-stats"></div>
       </section>
