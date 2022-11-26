@@ -7,21 +7,21 @@ const pokeTypes = document.querySelector('[data-poke-types]');
 const pokeStats = document.querySelector('[data-poke-stats]');
 
 const typeColors = {
-    electric: '#FFEA70',
-    normal: '#B09398',
-    fire: '#FF675C',
-    water: '#0596C7',
+    electric: '#F9CF30',
+    normal: '#AAA67F',
+    fire: '#F57D31',
+    water: '#6493EB',
     ice: '#AFEAFD',
     rock: '#999799',
     flying: '#7AE7C7',
-    grass: '#4A9681',
-    psychic: '#FFC6D9',
-    ghost: '#561D25',
-    bug: '#A2FAA3',
+    grass: '#74CB48',
+    psychic: '#FB5584',
+    ghost: '#70559B',
+    bug: '#A7B723',
     poison: '#795663',
     ground: '#D2B074',
     dragon: '#DA627D',
-    steel: '#1D8A99',
+    steel: '#B7B9D0',
     fighting: '#2F2F2F',
     default: '#2A1A1F',
 };
@@ -52,8 +52,9 @@ const renderPokemonData = data => {
 const setCardColor = types => {
     const colorOne = typeColors[types[0].type.name];
     const colorTwo = types[1] ? typeColors[types[1].type.name] : typeColors.default;
-    pokeImg.style.background =  `radial-gradient(${colorTwo} 33%, ${colorOne} 33%)`;
+    pokeImg.style.background =  ``;
     pokeImg.style.backgroundSize = ' 5px 5px';
+    pokeCard.style.background =  `${colorOne}`;
 }
 
 const renderPokemonTypes = types => {
