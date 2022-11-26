@@ -5,12 +5,14 @@ const pokeImgContainer = document.querySelector("[data-poke-img-container]");
 const pokeId = document.querySelector("[data-poke-id]");
 const pokeTypes = document.querySelector("[data-poke-types]");
 const pokeStats = document.querySelector("[data-poke-stats]");
+const pokeImg2 = document.querySelector("[data-poke-img2]");
 
 const typeColors = {
   electric: "#F9CF30",
   normal: "#AAA67F",
   fire: "#F57D31",
   water: "#6493EB",
+  fairy: "#eb64d5",
   ice: "#AFEAFD",
   rock: "#999799",
   flying: "#7AE7C7",
@@ -20,10 +22,11 @@ const typeColors = {
   bug: "#A7B723",
   poison: "#795663",
   ground: "#D2B074",
-  dragon: "#DA627D",
+  dragon: "#1a113f",
   steel: "#B7B9D0",
   fighting: "#2F2F2F",
   default: "#2A1A1F",
+  dark: "#2A1A1F",
 };
 
 const searchPokemon = (event) => {
@@ -55,6 +58,11 @@ const setCardColor = (types) => {
   pokeImg.style.background = ``;
   pokeImg.style.backgroundSize = " 5px 5px";
   pokeCard.style.background = `${colorOne}`;
+  pokeImg2.style.opacity = "6";
+  pokeImg2.style.position = "absolute";
+  pokeImg2.style.width = "218px";
+  pokeImg2.style.left = "16px";
+  pokeImg2.style.bottom = "4px";
 };
 
 const renderPokemonTypes = (types) => {
@@ -83,9 +91,11 @@ const renderPokemonStats = (stats) => {
 };
 
 const renderNotFound = () => {
-  pokeName.textContent = "No encontrado";
+  pokeName.textContent = "";
   pokeImg.setAttribute("src", "poke-shadow.png");
-  pokeImg.style.background = "#fff";
+  pokeImg2.style.opacity = "0";
+  pokeImg2.style.position = "absolute";
+  pokeImg.style.background = "";
   pokeTypes.innerHTML = "";
   pokeStats.innerHTML = "";
   pokeId.textContent = "";

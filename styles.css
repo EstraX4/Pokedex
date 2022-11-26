@@ -19,11 +19,9 @@ input::placeholder {
   color: rgb(100, 100, 100);
 }
 
-.pokeballImg {
+[data-poke-img2] {
   position: absolute;
-  width: 218px;
-  left: 16px;
-  bottom: 4px;
+  opacity: 0;
 }
 
 .poke-card {
